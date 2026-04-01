@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Mohammad Hani Jamal Khaznah, a junior Python developer focused on databases, AI, and building efficient software systems."
+    />
+    <title>Mohammad Hani Jamal Khaznah | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="bg-video">
+      <video autoplay muted loop playsinline>
+        <source src="assets/code-bg.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <audio id="notify-sound" preload="auto">
+      <source src="assets/notify.mp3" type="audio/mpeg" />
+    </audio>
+    <div class="site-shell">
+      <header class="site-header" id="top">
+        <div class="container nav-wrap">
+          <a class="brand" href="index.html" aria-label="Go to homepage">
+            <span class="brand-mark">MH</span>
+            <span class="brand-text">
+              <strong>Mohammad Hani</strong>
+              <small>Python Developer</small>
+            </span>
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="projects.html">Projects</a>
+          </nav>
+          <div class="nav-actions">
+            <div class="nav-login">
+              <button class="login-button" id="login-button" type="button">Log In</button>
+              <div class="login-panel" id="login-panel" aria-hidden="true">
+                <form id="login-form" class="login-form">
+                  <label>
+                    Full Name
+                    <input type="text" name="name" placeholder="Your name" required />
+                  </label>
+                  <label>
+                    Email Address
+                    <input type="email" name="email" placeholder="name@email.com" required />
+                  </label>
+                  <button class="button button--primary" type="submit">Log In</button>
+                </form>
+              </div>
+            </div>
+            <div class="nav-notifications">
+              <button class="notify-button" id="notify-button" type="button">
+                Notifications <span id="notify-count">0</span>
+              </button>
+              <div class="notify-panel" id="notify-panel" aria-hidden="true">
+                <p class="notify-empty">No notifications yet.</p>
+                <div class="notify-list" id="notify-list"></div>
+              </div>
+            </div>
+            <button class="logout-button" id="logout-button" type="button">Log Out</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero section" id="hero">
+          <div class="container hero-grid">
+            <div class="hero-copy reveal">
+              <p class="eyebrow">Junior Python Developer | Future Database & AI Specialist</p>
+              <h1>Mohammad Hani Jamal Khaznah</h1>
+              <p class="hero-text">
+                I build disciplined, well-structured Python solutions while sharpening a long-term
+                specialization in databases and artificial intelligence. My work is driven by
+                clean logic, steady execution, and a commitment to turning learning into practical
+                results.
+              </p>
+              <div class="hero-actions">
+                <a class="button button--primary" href="projects.html">View Projects</a>
+                <a class="button button--secondary" href="#contact">Contact Me</a>
+              </div>
+              <button class="follow-button follow-button--hero" id="follow-button" type="button">
+                Follow <span id="follow-count">0</span>
+              </button>
+              <ul class="hero-metrics" aria-label="Highlights">
+                <li>
+                  <strong>CS50</strong>
+                  <span>Computer science foundation in progress</span>
+                </li>
+                <li>
+                  <strong>Python-first</strong>
+                  <span>Focused on practical problem solving and code quality</span>
+                </li>
+                <li>
+                  <strong>AI + Data</strong>
+                  <span>Building toward database engineering and intelligent systems</span>
+                </li>
+              </ul>
+            </div>
+
+            <aside class="hero-panel reveal reveal-delay">
+              <div class="profile-card">
+                <div class="profile-card__photo" aria-label="Profile image">
+                  <img
+                    class="profile-card__image"
+                    src="profile.jpg"
+                    alt="Portrait artwork representing Mohammad Hani Jamal Khaznah"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+                  />
+                  <span class="profile-card__fallback">Add profile.jpg to portfolio-site</span>
+                </div>
+                <div class="profile-card__body">
+                  <p class="profile-card__label">Current Focus</p>
+                  <h2>Building the fundamentals for scalable, data-driven software.</h2>
+                  <p>
+                    Strengthening Python, sharpening problem-solving habits, and preparing for
+                    advanced work in SQL, databases, and AI engineering.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section" id="about">
+          <div class="container section-grid section-grid--about">
+            <div class="section-heading reveal">
+              <p class="eyebrow">About Me</p>
+              <h2>Learning with purpose, building with discipline.</h2>
+            </div>
+            <div class="about-card reveal reveal-delay">
+              <p>
+                I am a dedicated developer in the early stage of my professional journey, actively
+                building a strong computer science foundation through CS50 and consistent hands-on
+                Python practice. My philosophy is simple: strong systems come from clear thinking,
+                clean structure, and relentless refinement. I use technology as a tool to solve
+                real problems efficiently, and I am intentionally developing toward work that blends
+                robust database design with the intelligence and scale of modern AI-driven systems.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="skills">
+          <div class="container">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Skills</p>
+              <h2>Core capabilities growing around software, data, and systems thinking.</h2>
+            </div>
+            <div class="skills-grid">
+              <article class="skill-card reveal">
+                <h3>Languages</h3>
+                <ul>
+                  <li>Python</li>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript Fundamentals</li>
+                </ul>
+              </article>
+              <article class="skill-card reveal reveal-delay">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>Problem Solving</li>
+                  <li>Debugging</li>
+                  <li>Functions and Control Flow</li>
+                  <li>Data Structures: Lists and Tuples</li>
+                </ul>
+              </article>
+              <article class="skill-card reveal reveal-delay-2">
+                <h3>Tools</h3>
+                <ul>
+                  <li>Git</li>
+                  <li>GitHub</li>
+                  <li>VS Code</li>
+                  <li>Command Line Workflow</li>
+                </ul>
+              </article>
+              <article class="skill-card reveal">
+                <h3>Currently Learning</h3>
+                <ul>
+                  <li>SQL and Database Design</li>
+                  <li>Artificial Intelligence Basics</li>
+                  <li>Algorithmic Thinking</li>
+                  <li>Scalable Application Structure</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="experience">
+          <div class="container">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Experience</p>
+              <h2>Hands-on progress built through self-driven study and consistent execution.</h2>
+            </div>
+            <div class="timeline">
+              <article class="timeline-item reveal">
+                <div class="timeline-item__meta">
+                  <span>2025 - Present</span>
+                </div>
+                <div class="timeline-item__body">
+                  <h3>Self-Learning Developer</h3>
+                  <p class="timeline-item__company">Independent Learning Track</p>
+                  <ul>
+                    <li>Completed structured computer science study through CS50 coursework.</li>
+                    <li>Built Python practice projects to strengthen logic, syntax, and debugging.</li>
+                    <li>Established a daily learning rhythm focused on measurable skill growth.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal reveal-delay">
+                <div class="timeline-item__meta">
+                  <span>2025</span>
+                </div>
+                <div class="timeline-item__body">
+                  <h3>Python Practice Builder</h3>
+                  <p class="timeline-item__company">Personal Project Work</p>
+                  <ul>
+                    <li>Created small applications to reinforce functions, inputs, and data handling.</li>
+                    <li>Improved code clarity by rewriting exercises with cleaner structure.</li>
+                    <li>Turned beginner exercises into repeatable practice for faster problem solving.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="timeline-item reveal reveal-delay-2">
+                <div class="timeline-item__meta">
+                  <span>Current Focus</span>
+                </div>
+                <div class="timeline-item__body">
+                  <h3>Database and AI Development Path</h3>
+                  <p class="timeline-item__company">Specialization Preparation</p>
+                  <ul>
+                    <li>Studying SQL and database fundamentals to support future backend depth.</li>
+                    <li>Exploring introductory AI concepts with an emphasis on real-world application.</li>
+                    <li>Building the technical base needed for scalable, data-informed systems.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="services">
+          <div class="container">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Services</p>
+              <h2>Focused support for practical Python and structured beginner-friendly solutions.</h2>
+            </div>
+            <div class="services-grid">
+              <article class="service-card reveal">
+                <h3>Python Script Development</h3>
+                <p>Creating simple, efficient scripts to automate tasks and solve focused problems.</p>
+              </article>
+              <article class="service-card reveal reveal-delay">
+                <h3>Code Organization</h3>
+                <p>Improving readability and structure for small Python projects and learning builds.</p>
+              </article>
+              <article class="service-card reveal reveal-delay-2">
+                <h3>Basic Automation</h3>
+                <p>Designing entry-level automation workflows that save time and reduce repetition.</p>
+              </article>
+              <article class="service-card reveal">
+                <h3>Technical Growth Support</h3>
+                <p>Helping beginners approach problem solving with cleaner logic and better debugging habits.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="objective">
+          <div class="container">
+            <div class="objective-card reveal">
+              <p class="eyebrow">Career Objective</p>
+              <h2>
+                To grow into a database-focused engineer and advance into artificial intelligence,
+                building smart, scalable systems that deliver real-world value.
+              </h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="contact">
+          <div class="container contact-grid">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Contact</p>
+              <h2>Open to meaningful collaboration, learning opportunities, and future-ready projects.</h2>
+              <p class="contact-copy">
+                If you are looking for a disciplined developer with strong momentum and a clear
+                growth path in Python, databases, and AI, let's connect.
+              </p>
+              <div class="contact-links">
+                <a href="mailto:dr.omegakh32@gmail.com">dr.omegakh32@gmail.com</a>
+                <a href="https://github.com/HanOon_32" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://www.youtube.com/@kaznax10" target="_blank" rel="noreferrer">YouTube</a>
+              </div>
+            </div>
+
+            <div class="chat-widget" id="chat-widget">
+              <div class="chat-widget__header">
+                <h3>Live Chat</h3>
+                <span id="chat-role" class="chat-role"></span>
+              </div>
+              <div class="chat-widget__threads" id="chat-threads">
+                <label for="chat-thread-select">Conversations</label>
+                <select id="chat-thread-select"></select>
+              </div>
+              <div class="chat-widget__alerts" id="chat-alerts"></div>
+              <div class="chat-widget__messages" id="chat-messages"></div>
+              <form class="chat-widget__form" id="chat-form">
+                <input type="text" name="message" placeholder="Type your message..." required />
+                <button class="button button--primary" type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-wrap">
+          <p>&copy; 2026 Mohammad Hani Jamal Khaznah. All rights reserved.</p>
+          <a href="#hero">Back to top</a>
+          <a class="button button--secondary next-page" href="projects.html">Next Page</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
+
